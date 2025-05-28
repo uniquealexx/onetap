@@ -567,10 +567,10 @@ public:
 	NETVAR( recoil_index, float,        "DT_WeaponCSBase",         "m_flRecoilIndex" );
 	NETVAR( shot_time, float,           "DT_WeaponCSBase",         "m_fLastShotTime" );
 
-	// thx senator
+	// fuk u senator
 	inline weapon_info_t* wpn_data( )
 	{
-		return memory::get_vfunc< weapon_info_t*( __thiscall* )( void* ) >( this, 445 )( this );
+		return memory::get_vfunc< weapon_info_t*( __thiscall* )( void* ) >( this, 446 )( this );
 	}
 
 	// k i don't fucking get this
@@ -578,7 +578,7 @@ public:
 	// 1 after GetName, however, it's not ):
 	inline const char* get_name( )
 	{
-		return memory::get_vfunc< const char*( __thiscall* )( void* ) >( this, 376 )( this );
+		return wpn_data()->weapon_name;
 	}
 
 	std::string print_name( );
@@ -604,19 +604,20 @@ public:
 		return weapon_info->max_clip_ammo;
 	}
 	
+	// fuk u senator again
 	inline float spread( )
 	{
-		return memory::get_vfunc< float( __thiscall* )( void* ) >( this, 437 )( this );
+		return memory::get_vfunc< float( __thiscall* )( void* ) >( this, 439 )( this );
 	}
 
 	inline void update_accuracy_penalty( )
 	{
-		return memory::get_vfunc< void( __thiscall* )( void* ) >( this, 469 )( this );
+		return memory::get_vfunc< void( __thiscall* )( void* ) >( this, 471 )( this );
 	}
 
 	inline float inaccuracy( )
 	{
-		return memory::get_vfunc< float( __thiscall* )( void* ) >( this, 468 )( this );
+		return memory::get_vfunc< float( __thiscall* )( void* ) >( this, 469 )( this );
 	}
 
 	bool can_fire( );

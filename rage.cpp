@@ -214,7 +214,7 @@ void c_aimbot::aim( )
 	static const auto weapon_recoil_scale = csgo.m_engine_cvars( )->FindVar( xors( "weapon_recoil_scale" ) );
 	static const auto weapon_accuracy_nospread = csgo.m_engine_cvars( )->FindVar( xors( "weapon_accuracy_nospread" ) );
 
-	if ( !ctx.m_local->weapon( ) || ( !g_input.is_key_pressed( ctx.m_settings.rage_key ) && ctx.m_settings.rage_key > 0 ) )
+	if ( !ctx.m_local->weapon( ) )
 		return;
 
 	possible_target_t target;

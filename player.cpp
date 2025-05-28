@@ -137,7 +137,7 @@ bool c_base_weapon::can_fire( )
 std::string c_base_weapon::print_name( )
 {
 	const  auto  raw        = get_name( );
-	const  auto  localized  = csgo.m_localize( )->localize( raw );
+	/*const  auto  localized  = csgo.m_localize( )->localize( raw );*/
 
-	return util::to_lower( util::unicode_to_ascii( localized ) );
+	return util::to_lower( /*util::unicode_to_ascii( localized )*/  raw);
 }

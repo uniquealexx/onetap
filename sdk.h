@@ -3320,7 +3320,7 @@ public:
 	studiohdr_t* GetStudioModel( const model_t* model )
 	{
 		using fn = studiohdr_t*( __thiscall* )( void*, const model_t* );
-		return memory::get_vfunc< fn >( this, 32 )( this, model );
+		return memory::get_vfunc< fn >( this, 30 )( this, model );
 	}
 };
 #define DEFCOLOR_SRC(name, r, g, b) constexpr static color_t name (uint8_t a = 255) { return color_t(r, g, b, a); }
@@ -4814,7 +4814,7 @@ class c_localize
 public:
 	wchar_t* localize( const char* unlocalized )
 	{
-		return memory::get_vfunc< wchar_t*( __thiscall* )( void*, const char* ) >( this, 11 )( this, unlocalized );
+		return memory::get_vfunc< wchar_t*( __thiscall* )( void*, const char* ) >( this, 12 )( this, unlocalized );
 	}
 };
 
